@@ -12,3 +12,4 @@ rsync -avz ${user}@${ip}:${dir} /tmp/auxiliar
 
 cd /tmp/auxiliar
 tar -cvzf $data.tar.gz /tmp/auxiliar && mv /tmp/auxiliar/$data.tar.gz ~/backups/$user
+

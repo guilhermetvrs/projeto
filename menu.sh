@@ -3,13 +3,20 @@
 mkdir /tmp/auxiliar
 
 while true; do
-	echo "PARA REALIZAR UM BACKUP POR HORA, OPÇÂO 1"
-	echo "PARA REALIZAR UM BACKUP POR DIA, OPÇÂO 2"
-	echo "PARA REALIZAR UM BACKUP POR SEMANA, OPÇÂO 3"
-	echo "PARA RESTAURAR UM BACKUP FEITO, OPÇÂO 10"
-	echo "PARA VISUALIZAR OS BACKUPS JA FEITOS, OPÇÂO 4"
+	echo "PARA REALIZAR UM BACKUP POR HORA, OPÇÃO 1"
+
+	echo "PARA REALIZAR UM BACKUP POR DIA, OPÇÃO 2"
+
+	echo "PARA REALIZAR UM BACKUP POR SEMANA, OPÇÃO 3"
+
+	echo "PARA RESTAURAR UM BACKUP FEITO, OPÇÃO 10"
+
+	echo "PARA VISUALIZAR OS BACKUPS JA FEITOS, OPÇÃO 4"
+
 	echo "PARA VISUALIZAR AS CONFIGURAÇÕES DO SERVIDOR, OPÇÃO 5"
-	echo "PARA SAIR DO SCRIPT DE BACKUP, OPÇÂO 0"
+
+	echo "PARA SAIR DO SCRIPT DE BACKUP, OPÇÃO 0"
+
 	read -p "DIGITE A OPÇÂO QUE DESEJA REALIZAR:" opcao
 	case $opcao in
 	1) #POR HORA
@@ -35,7 +42,7 @@ while true; do
 		;;
 	10) #RESTAURAR BACKUP JA FEITO
 		source restaurar.sh
-		echo "O BACKUP ESTÁ SENDO RESTAURADO.............."
+		echo "O BACKUP ESTA SENDO RESTAURADO.............."
 		sleep 5; clear
 		;;
 	4) #BACKUPS JA FEITOS
@@ -43,7 +50,7 @@ while true; do
 		echo $(ls ~/backups/${user})
 		sleep 5; clear
 		;;
-	5) #ACESSANDO CONFIGURAÇÃO
+	5) #ACESSANDO CONFIGURAÇÕES
 		source config.sh
 		sleep 5; clear
 		;;
